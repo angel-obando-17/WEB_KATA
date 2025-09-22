@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma Proyecto Bioetanol</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        
+        .gantt-container {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+        
+        .gantt-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 1200px;
+        }
+        
+        .gantt-table th {
+            background: #34495e;
+            color: white;
+            padding: 12px 8px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .gantt-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            height: 50px;
+            vertical-align: middle;
+        }
+        
+        .activity-cell {
+            text-align: left;
+            padding-left: 15px;
+            background: #f8f9fa;
+            font-weight: 500;
+            min-width: 350px;
+            font-size: 13px;
+        }
+        
+        .objective-cell {
+            background: #2c3e50;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .week-cell {
+            width: 60px;
+            position: relative;
+        }
+        
+        .activity-bar {
+            height: 30px;
+            background: #3498db;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 2px;
+        }
+        
+        .activity-code {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+        
+        .responsible {
+            color: #7f8c8d;
+            font-size: 11px;
+            font-style: italic;
+            margin-top: 2px;
+        }
+        
+        .progress-info {
+            margin-top: 20px;
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .team-info {
+            margin-bottom: 20px;
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .team-info h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cronograma del Proyecto: Obtención de Bioetanol a partir de C. Vulgaris</h1>
+        
+        <div class="team-info">
+            <h3>Equipo de Trabajo</h3>
+            <p><strong>Juan Miguel Eraso</strong> - Gerente General (11h/sem) | <strong>Nathalia Caez</strong> - Director Técnico (11h/sem) | <strong>Angela Moreno</strong> - Director Comercial (11h/sem) | <strong>Danna Muñoz</strong> - Director Financiero (11h/sem) | <strong>Camilo Pardo</strong> - Asesor General (5h/sem)</p>
+        </div>
+        
+        <div class="gantt-container">
+            <table class="gantt-table">
+                <thead>
+                    <tr>
+                        <th style="width: 350px;">Actividad / Responsable</th>
+                        <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Objetivo 1 -->
+                    <tr>
+                        <td class="objective-cell">OBJETIVO 1: Gestión y Formulación del Proyecto</td>
+                        <td colspan="15"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">1.1</span>
+                            Búsqueda de bibliografía científica<br>
+                            <div class="responsible">Responsable: Nathalia Caez</div>
+                        </td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">1.2</span>
+                            Identificar metodología y recursos<br>
+                            <div class="responsible">Responsable: Nathalia Caez</div>
+                        </td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">1.3</span>
+                            Definir problemática y objetivos<br>
+                            <div class="responsible">Responsable: Juan Miguel Eraso</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">1.4</span>
+                            Cronograma preliminar<br>
+                            <div class="responsible">Responsable: Juan Miguel Eraso</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">1.5</span>
+                            Estimación de presupuesto<br>
+                            <div class="responsible">Responsable: Danna Muñoz</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">1.6</span>
+                            Reuniones de coordinación<br>
+                            <div class="responsible">Responsable: Juan Miguel Eraso + Todo el equipo</div>
+                        </td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    
+                    <!-- Objetivo 2 -->
+                    <tr>
+                        <td class="objective-cell">OBJETIVO 2: Requerimientos Másicos y Energéticos</td>
+                        <td colspan="15"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">2.1</span>
+                            Diagrama de bloques del proceso<br>
+                            <div class="responsible">Responsable: Nathalia Caez</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">2.2</span>
+                            Metodología de laboratorio<br>
+                            <div class="responsible">Responsable: Nathalia Caez</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">2.3</span>
+                            Balances de masa y energía<br>
+                            <div class="responsible">Responsable: Angela Moreno</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">2.4</span>
+                            Requerimientos energéticos equipos<br>
+                            <div class="responsible">Responsable: Angela Moreno</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    
+                    <!-- Objetivo 3 -->
+                    <tr>
+                        <td class="objective-cell">OBJETIVO 3: Dimensionamiento y Escalado</td>
+                        <td colspan="15"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">3.1</span>
+                            Capacidad de producción objetivo<br>
+                            <div class="responsible">Responsable: Angela Moreno</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">3.2</span>
+                            Identificar equipos requeridos<br>
+                            <div class="responsible">Responsable: Angela Moreno</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">3.3</span>
+                            Dimensionar equipos seleccionados<br>
+                            <div class="responsible">Responsable: Nathalia Caez</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">3.4</span>
+                            Diseñar diagrama P&ID<br>
+                            <div class="responsible">Responsable: Nathalia Caez</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    
+                    <!-- Objetivo 4 -->
+                    <tr>
+                        <td class="objective-cell">OBJETIVO 4: Pre-factibilidad Financiera</td>
+                        <td colspan="15"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">4.1</span>
+                            Estudio de mercado<br>
+                            <div class="responsible">Responsable: Danna Muñoz</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">4.2</span>
+                            Estimar costos y costo unitario<br>
+                            <div class="responsible">Responsable: Danna Muñoz</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">4.3</span>
+                            Flujo de caja e indicadores<br>
+                            <div class="responsible">Responsable: Danna Muñoz</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">4.4</span>
+                            Análisis de escenarios económicos<br>
+                            <div class="responsible">Responsable: Danna Muñoz</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                    </tr>
+                    <tr>
+                        <td class="activity-cell">
+                            <span class="activity-code">4.5</span>
+                            Preparar informe final<br>
+                            <div class="responsible">Responsable: Juan Miguel Eraso + Todo el equipo</div>
+                        </td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                        <td class="week-cell"><div class="activity-bar">●</div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="progress-info">
+            <strong>Duración del proyecto:</strong> 15 semanas | 
+            <strong>Total de actividades:</strong> 19 actividades distribuidas en 4 objetivos principales<br>
+            <strong>Cronograma organizado de actividades tempranas a tardías</strong>
+        </div>
+    </div>
+</body>
+</html>
